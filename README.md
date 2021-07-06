@@ -1,0 +1,1 @@
+Репозиторий создан для ручного управления функциями [goofy](https://github.com/Chimildic/goofy). Позволяет задать читаемый адрес и скрыть предупреждение от Google. Все подробности в [теме](https://github.com/Chimildic/goofy/discussions/9).
