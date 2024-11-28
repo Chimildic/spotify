@@ -3,5 +3,6 @@
   let entries = Object.fromEntries(params);
   params.delete('state');
   let redirectUrl = `https://script.google.com/macros/d/${entries.state}/usercallback?${params.toString()}`;
-  window.open(redirectUrl, "_self");
+  // window.open(redirectUrl, "_self");
+  console.log(redirectUrl)
 </script>
