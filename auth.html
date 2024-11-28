@@ -1,0 +1,5 @@
+<script>
+  let params = Object.fromEntries(new URLSearchParams(location.search));
+  let redirectUrl = `https://script.google.com/macros/d/${params.state}/usercallback${location.search}`;
+  window.open(redirectUrl, "_self");
+</script>
