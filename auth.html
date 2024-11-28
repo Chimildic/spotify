@@ -1,5 +1,6 @@
 <script>
   let params = new URLSearchParams(location.search);
+  console.log(params);
   let entries = Object.fromEntries(params);
   params.delete('state');
   let redirectUrl = `https://script.google.com/macros/d/${entries.state}/usercallback?${params.toString()}`;
