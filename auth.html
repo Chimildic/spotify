@@ -11,8 +11,7 @@
     params.delete(KEY)
     redirectUrl = entries.baseurl
     params.delete('baseurl')
-    redirectUrl += params.toString()
+    redirectUrl += '?' + params.toString()
   }
-  // window.open(redirectUrl, "_self")
-  console.log(redirectUrl)
+  window.open(redirectUrl, "_self")
 </script>
