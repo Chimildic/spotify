@@ -4,11 +4,12 @@
   let entries = Object.fromEntries(params)
   let redirectUrl
   if (entries.projectId == undefined) {
-    redirectUrl = `https://script.google.com/macros/d/${localStorage.getItem(KEY)}/usercallback${location.search}`
     localStorage.removeItem(KEY)
+    redirectUrl = `https://script.google.com/macros/d/${localStorage.getItem(KEY)}/usercallback${location.search}`
   } else {
-    redirectUrl = entries.redirect
     localStorage.setItem(KEY, entries.projectId)
+    delete params[KEY]
+    redirectUrl = params.toString()
   }
-  // window.open(redirectUrl, "_self")
+  window.open(redirectUrl, "_self")
 </script>
