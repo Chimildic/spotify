@@ -8,9 +8,9 @@
     redirectUrl = `https://script.google.com/macros/d/${localStorage.getItem(KEY)}/usercallback${location.search}`
   } else {
     localStorage.setItem(KEY, entries.projectId)
-    delete params[KEY]
-    redirectUrl = entries.baseurl + '?'
-    delete params['baseurl']
+    params.delete(KEY)
+    redirectUrl = entries.baseurl
+    params.delete('baseurl')
     redirectUrl += params.toString()
   }
   // window.open(redirectUrl, "_self")
