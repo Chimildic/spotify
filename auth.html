@@ -8,7 +8,7 @@
     localStorage.removeItem(KEY)
   } else {
     redirectUrl = entries.redirect
-    localStorage.addItem(KEY, entries.projectId)
+    localStorage.setItem(KEY, entries.projectId)
   }
   window.open(redirectUrl, "_self")
 </script>
