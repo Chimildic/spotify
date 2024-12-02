@@ -9,7 +9,9 @@
   } else {
     localStorage.setItem(KEY, entries.projectId)
     delete params[KEY]
-    redirectUrl = params.toString()
+    redirectUrl = entries.baseurl + '?'
+    delete params['baseurl']
+    redirectUrl += params.toString()
   }
   window.open(redirectUrl, "_self")
 </script>
